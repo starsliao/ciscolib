@@ -284,15 +284,16 @@ class Device(object):
         
         {ip, age, mac, interface}
         """
-        re_text = 'Internet\s+(?P<ip>\d+\.\d+\.\d+\.\d+)\s+(\d+|-)\s+((?:\d|\w){4}\.(?:\d|\w){4}\.(?:\d|\w){4})\s+ARPA\s+(.+)\r?\n?'
-        
+        #re_text = 'Internet\s+(?P<ip>\d+\.\d+\.\d+\.\d+)\s+(\d+|-)\s+((?:\d|\w){4}\.(?:\d|\w){4}\.(?:\d|\w){4})\s+ARPA\s+(.+)\r?\n?'
+        re_text = 'Internet\s+(?P<ip>\d+\.\d+\.\d+\.\d+)\s+(\d+|-)\s+((?:\d|\w){4}\.(?:\d|\w){4}\.(?:\d|\w){4})\s+ARPA(.*)\r?\n?'
         table = []
         for item in re.findall(re_text, self.cmd("show arp")):
             table.append({
                 "ip": item[0],
                 "age": item[1],
                 "mac": item[2],
-                "interface": item[3].strip()
+                #"interface": item[3].strip()
+                "vlan": item[3].strip()
             })
     
         return table
