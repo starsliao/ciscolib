@@ -292,7 +292,6 @@ class Device(object):
                 "ip": item[0],
                 "age": item[1],
                 "mac": item[2],
-                #"interface": item[3].strip()
                 "vlan": item[3].strip()
             })
     
