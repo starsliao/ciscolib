@@ -1,5 +1,11 @@
 ### revised get_arp_table for WS-C3560X-24 by StarsL
 
+## install
+```
+python setup.py build
+python setup.py install
+```
+---
 # ciscolib
 
 A Python library for interacting with Cisco devices via command line. Only
