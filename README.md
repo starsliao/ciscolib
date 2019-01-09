@@ -1,16 +1,4 @@
-# Deprecation Notice
-
-This project is officially deprecated. I haven't updated it in years, and it's
-horribly basic (it only supports telent, which you should _not_ be using!).
-
-I'm keeping this code around since someone might find it useful, but I don't
-recommend using it as-is.
-
-For doing network device automation, here are a couple of projects that I
-recommend you check out:
-
-* [Trigger](https://github.com/trigger/trigger)
-* [Napalm](https://github.com/napalm-automation/napalm)
+### revised get_arp_table for WS-C3560X-24 by StarsL
 
 # ciscolib
 
