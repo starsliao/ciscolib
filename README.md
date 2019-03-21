@@ -1,4 +1,4 @@
-### revised get_arp_table for WS-C3560X-24 by StarsL
+### revised get_arp_table for WS-C3560X-24 by StarsL.cn
 
 ## install
 ```
