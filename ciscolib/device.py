@@ -298,7 +298,11 @@ class Device(object):
         return table
 
     def get_ipmac_list(self):
-        """ arp 192.168.10.141 b025.aa19.e8ba ARPA """
+        """
+        进入enable模式后才能使用该函数。
+        数据源格式：
+        arp 192.168.10.141 b025.aa19.e8ba ARPA 
+        """
         re_text = 'arp\s+(?P<ip>\d+\.\d+\.\d+\.\d+)\s+((?:\d|\w){4}\.(?:\d|\w){4}\.(?:\d|\w){4})\s+ARPA\r?\n?'
         table = []
         for item in re.findall(re_text, self.cmd("show running-config | include ^arp")):
